@@ -1,0 +1,11 @@
+# Local config files
+*.config
+#SSH config
+*.key
+# Crash log files
+crash.log
+#Tempory files
+*.tmp
+*.temp
+
+

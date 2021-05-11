@@ -1,5 +1,16 @@
 # devops-netology
-Zero init
+###First task 1
+>Zero init  
+>Second modify
 
-Second modify
+# Gitignore values
+_Файлы игнора_
+.config Файлы конфига системы
 
+.key Файлы SSH сервера
+
+.crash.log логи краша
+
+.tmp временные файлы
+
+.temp временные файлы
