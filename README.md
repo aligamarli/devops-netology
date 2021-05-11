@@ -4,7 +4,8 @@
 >Second modify
 
 # Gitignore values
-_Файлы игнора_
+_Файлы игнора_ 
+
 .config Файлы конфига системы
 
 .key Файлы SSH сервера
