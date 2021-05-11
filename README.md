@@ -1,4 +1,5 @@
 # devops-netology
+Zero init
 
+Second modify
 
-After first modify
