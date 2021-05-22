@@ -14,3 +14,6 @@ _Файлы игнора_
 .tmp временные файлы
 
 .temp временные файлы
+
+# New line at fix branch
+New line at 22.05.2021
