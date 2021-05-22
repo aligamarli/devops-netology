@@ -17,3 +17,6 @@ _Файлы игнора_
 .temp временные файлы
 
 New line at Main Local
+
+#New lines from IDE
+code from IDE pycharm
