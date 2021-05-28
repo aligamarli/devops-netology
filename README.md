@@ -1,6 +1,5 @@
 # devops-netology
 ###First task 1
->Zero init  
 >Second modify
 
 ### Task 2.3 27.05.2021
