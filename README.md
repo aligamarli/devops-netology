@@ -3,9 +3,21 @@
 >Zero init  
 >Second modify
 
-
 ###Task 2.3 27.05.2021
 >
+####Task 3.1 28.05.2021
+> 5 Video Memory  4 
+> Base Memory 1024 
+> Processors 2
+ 
+
+>6  
+>Customize the amount of memory on the VM:
+>vb.memory = "1024"
+
+
+
+
 
 # Gitignore values
 _Файлы игнора_ 
