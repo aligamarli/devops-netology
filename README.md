@@ -84,13 +84,18 @@
 >echo string | sudo tee /root/new_file  
 > работает по той причине что, Эхо вывод делает а записать уже нужно права записи, tee получает stdout и правами root записывает. Сам shell запущен от обычного пользователя, и поэтому не может записать файл
 ####3.3.1
-> system() chdir system call вызывает 
+> system() chdir system call вызывает
+> 
 > chdir(/tmp")
+> 
 >
 ####3.3.2 
-> strace file /dev/sda 2>&1 | grep "magic" 
+> strace file /dev/sda 2>&1 | grep "magic"
+> 
 > bopenat(AT_FDCWD, "/etc/magic", O_RDONLY) = 3
+> 
 > openat(AT_FDCWD, "/usr/share/misc/magic.mgc", O_RDONLY) = 3
+> 
 
 ####3.3.3
 > 2>&1 не аппендом, а перенаправлением один раз вывод в файл
@@ -101,29 +106,48 @@
 ####3.3.5
 > sudo opensnoop-bpfcc
 
-> 784    vminfo              4   0 /var/run/utmp
-> 581    dbus-daemon        -1   2 /usr/local/share/dbus-1/system-services
+> 784    vminfo              4   0 /var/run/utmp 
+> 
+> 581    dbus-daemon        -1   2 /usr/local/share/dbus-1/system-services 
+> 
 > 581    dbus-daemon        18   0 /usr/share/dbus-1/system-services
+> 
 > 581    dbus-daemon        -1   2 /lib/dbus-1/system-services
+> 
 > 581    dbus-daemon        18   0 /var/lib/snapd/dbus-1/system-services/
+> 
 #####3.3.6
 > openat(AT_FDCWD, "/proc/cpuinfo", O_RDONLY) = 3  -- для CPU
-> openat(AT_FDCWD, "/proc/version", O_RDONLY) = 3  -- uname -r это для ядра 
+> 
+> openat(AT_FDCWD, "/proc/version", O_RDONLY) = 3  -- uname -r это для ядра
+> 
 #####3.3.7
 > test -d /tmp/some_dir; echo Hi правая часть это последовательная операция и ни как не звязанная с левой часть
+> 
 > test -d /tmp/some_dir && echo Hi Правая част сработает если первое условие будет TRUE
-> set -e test -d /tmp/some_dir &&  echo Hi  Тогда заработает 
+> 
+> set -e test -d /tmp/some_dir &&  echo Hi  Тогда заработает
+> 
 #####3.3.8
 > set -euxo pipefail
+> 
 > set -e моментально выходит если получает не нулевое значение
+> 
 > set -x Дебагинг вывод в шелл всех выполненных команд
+> 
 > set -u Считает переменные если эта переменная не была задекларирована, без этой не будет выскахвать про ошибку. Это опция выдает контретную ошибку файл. unbound variable"
+> 
 > set -o pipefail выдает то значение которое отличное от нуля, т.е если скрипт выполнился с ошибкой то в пайплайне тоже выйдет с ошибкой.
+> 
 #####3.3.9
-> ps -o stat 
+> ps -o stat
+> 
 > STAT
+> 
 > Ss
+> 
 > R+
+> 
 
 > ps -aux если посмотреть можно увидеть процесы 
 > s PID равнно SID это унаследованный
