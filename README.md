@@ -78,6 +78,8 @@
 > type -a bash гдн расположен файл
 > >bash is /usr/bin/bash
 > >bash is /bin/bash
+> export PATH="/tmp/blabla:$PATH" добавляю папаку /tmp/blabla в переменную среды
+> 
 #### Task3.2.13
 >echo 0 > /proc/sys/kernel/yama/ptrace_scope 
 > по дефолту нужно активировать что-бы через reptyr потянуть процесс
