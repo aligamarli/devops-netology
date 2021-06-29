@@ -75,7 +75,9 @@
 #### Task3.2.11
 >see see2 
 #### Task3.2.12
->?????? Задача не понятна
+> type -a bash гдн расположен файл
+> >bash is /usr/bin/bash
+> >bash is /bin/bash
 #### Task3.2.13
 >echo 0 > /proc/sys/kernel/yama/ptrace_scope 
 > по дефолту нужно активировать что-бы через reptyr потянуть процесс
