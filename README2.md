@@ -62,3 +62,34 @@ Jul 06 06:36:47 localhost.localdomain node_exporter[685]: level=info ts=2021-07-
 >sudo dmesg | grep "Hypervisor detected"
 > 
 > [    0.000000] Hypervisor detected: VMware
+####3.4.5
+> sysctl fs.nr_open  Это количество открытых файлов одновременно, количество файловых дескрипторово 
+> 
+> fs.nr_open = 1048576
+> 
+####3.4.6
+>unshare -f --pid --mount-proc sleep 1h
+> на хосте root      239817  0.0  0.0  16716   592 pts/2    S    00:24   0:00 sleep 1h
+
+>в самом нейм спесе root@ubuntu:/# ps -aux
+>USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+> 
+
+####3.4.7
+fork bomba которая плодится как кролик
+dmesg | grep "fork"
+[ 1657.879408] cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/session-2.scope
+[ 1683.215824] cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/user@1000.service
+[ 1739.293543] cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/session-8.scope
+[ 1739.316000] cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/session-7.scope
+[ 1790.592386] cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/session-9.scope
+[ 1792.610536] cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/session-10.scope
+
+можно ограничить количество процессов здесь в системе /etc/security/limits.conf 
+или командой 
+ulimit -u
+max user processes              (-u) 15392
+задай количество процессов на пользователя 
+>>ulimit -S -u 6000 
+
+ 
