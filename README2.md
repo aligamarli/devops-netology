@@ -67,7 +67,8 @@ Jul 06 06:36:47 localhost.localdomain node_exporter[685]: level=info ts=2021-07-
 >sudo dmesg | grep "Hypervisor detected"
 > 
 > [    0.000000] Hypervisor detected: VMware
-####3.4.5
+
+>####3.4.5
 > sysctl fs.nr_open  Это количество открытых файлов одновременно, количество файловых дескрипторово 
 > 
 > fs.nr_open = 1048576
