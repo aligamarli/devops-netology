@@ -14,13 +14,15 @@
 
 >[Service]
 > 
+> EnvironmentFile=/etc/sysconfig/nodeconf   ### указываем на файл с опциями
+
 >User=node_exporter
 > 
 >Group=node_exporter
 >
 >Type=simple
 >
->ExecStart=/usr/local/bin/node_exporter
+>ExecStart=/usr/local/bin/node_exporter $OPTIONS    ###запуск с опциями
 
 >[Install]
 > 
@@ -29,6 +31,9 @@
 
 >>Для удобства 2 машини под node_exporter и прометеус
 >> [prometheus.yml](https://github.com/aligamarli/devops-netology/blob/07602e067313fa0304bb670eb1afd909540329d5/p
+ 
+>cat /etc/sysconfig/nodeconf
+>>OPTIONS=----web.listen-address=":9910"
 
 ##systemctl status node_exporter.service
 ● node_exporter.service - Node Exporter
